@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Clear Browser Data",
+  "description": "A modern Chrome Extension to quickly clear your browser data with customizable options, presets, and one-click cleanup.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Clear Browser Data",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "browsingData",
+    "alarms",
+    "notifications",
+    "history"
+  ],
+  "commands": {
+    "clear-selected-data": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Clear selected browser data"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
