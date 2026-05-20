@@ -1,0 +1,14 @@
+@import './index.css';
+
+/* Fixed popup viewport. Chrome sizes the extension popup from the body. */
+html,
+body {
+  width: 420px;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Pass the popup height down to the app root container. */
+#root {
+  height: 100%;
+}
